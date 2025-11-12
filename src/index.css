@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+
+.btns {
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: 0.6px solid #ccc;
+  border-radius: 5px;
+  color: #323232;
+  cursor: pointer;
+  transition: all 0.2s ease; /* smooth animation */
+}
+
+.btns:hover {
+  transform: scale(1.05); /* slightly larger */
+  border-color: #007bff; /* optional highlight */
+  color: #007bff;
+}
+
+.card {
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* slightly larger */
+  border-color: #007bff; /* optional highlight */
+  color: #007bff;
+}
+
+/* Layout fix */
+.main-content {
+  margin-left: 18rem; /* same as sidebar width */
+  padding: 1rem 2rem;
+  transition: margin 0.3s ease;
+}
+
+/* Remove the hardcoded margins */
+.recommended-flex,
+.recommended-title,
+.card-container {
+  margin-left: 0;
+}
+
+/* Keep card layout nice */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+/* Recommended buttons row */
+.recommended-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.recommended-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-content {
+  margin-left: 250px; /* same as sidebar width */
+  padding: 1rem 2rem;
+  transition: margin 0.3s ease;
+  width: calc(100% - 250px);
+}

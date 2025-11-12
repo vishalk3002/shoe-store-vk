@@ -1,0 +1,58 @@
+/* .recommended-flex {
+  display: flex;
+  margin-left: 20rem;
+}
+
+.recommended-title {
+  margin-left: 20rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers all child elements horizontally */
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.recommended-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.recommended-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* centers buttons */
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Responsive improvements */
+@media (max-width: 1024px) {
+  .wrapper {
+    margin-left: 0; /* in case sidebar collapses */
+  }
+
+  .recommended-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recommended-title {
+    text-align: center;
+  }
+
+  .recommended-flex {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  border-bottom: 2px solid #f3f3f3;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+input {
+  padding: 12px 20px;
+  border: none;
+  background: #f7f6f6;
+  outline: none;
+  margin-right: 20px;
+  border-radius: 5px;
+  position: relative;
+  width: 14rem;
+}
+
+.nav-icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease; /* smooth animation */
+}
+
+.nav-icons.heart:hover {
+  color: rgb(243, 123, 143);
+  transform: scale(1.05); /* slightly larger */
+}
+
+.nav-icons.cart:hover {
+  color: rgb(119, 245, 119);
+  transform: scale(1.05); /* slightly larger */
+}
+
+.nav-icons.user:hover {
+  color: rgb(75, 203, 241);
+  transform: scale(1.05); /* slightly larger */
+}
+
+.profile-container {
+  display: flex; /* make it a flex container */
+  justify-content: space-evenly; /* distribute icons evenly */
+  align-items: center;
+  gap: 16px; /* space between icons */
+}
