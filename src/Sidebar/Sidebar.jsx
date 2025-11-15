@@ -24,7 +24,7 @@ const Sidebar = ({ handleChange, onToggle }) => {
       {isOpen && (
         <section className="sidebar">
           <div className="logo-container">
-            <h1>🛒</h1>
+            <h1>Shoe Store</h1>
           </div>
 
           <Category handleChange={handleChange} />
