@@ -1,0 +1,93 @@
+/* === Category Sidebar === */
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+/* Container spacing */
+.sidebar-items {
+  margin-top: 20px;
+}
+
+/* Label container for radio buttons */
+.sidebar-label-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.2;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Hide the default radio */
+.sidebar-label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom radio circle */
+.checkmark {
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Gradient background for 'All' option if you add .all class */
+.all {
+  background: linear-gradient(135deg, #007bff, crimson);
+}
+
+/* Hover effect */
+.sidebar-label-container:hover .checkmark {
+  background-color: #ccc;
+}
+
+/* When selected */
+.sidebar-label-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+}
+
+/* White inner dot (visible when checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the white dot when checked */
+.sidebar-label-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Inner dot size and position */
+.sidebar-label-container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Divider line */
+.line {
+  margin-top: 3rem;
+  border: none;
+  border-top: 1px solid #f0f0f0;
+}

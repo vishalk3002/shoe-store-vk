@@ -1,0 +1,74 @@
+/* Main Layout */
+.main-layout {
+  display: flex;
+  position: relative;
+  padding-left: 340px; /* prevent overlap when sidebar is open */
+}
+
+/* Hamburger Button */
+.hamburger {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 20;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 360px; /* wider sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Full height on all devices including Pixel and iPhone */
+
+  min-height: fit-content;
+  height: auto; /* mobile fix */
+
+  border-right: 2px solid #e5e5e5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  z-index: 10;
+  padding-top: 5rem;
+
+  /* smooth slide animation */
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-320px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.logo-container {
+  margin-bottom: 4rem;
+}
+
+.logo-container h1 {
+  margin-top: 1.3rem;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .main-layout {
+    padding-left: 0px; /* no space when sidebar hidden on mobile */
+  }
+
+  .sidebar {
+    width: 280px; /* slightly smaller for mobile */
+  }
+}

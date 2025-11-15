@@ -1,0 +1,150 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+/* APP LAYOUT */
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ---------------------------------- */
+/* SIDEBAR */
+/* ---------------------------------- */
+
+.sidebar {
+  width: 360px; /* wider sidebar */
+  height: 100vh; /* full length ALWAYS */
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  border-right: 2px solid #e5e5e5;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+}
+
+/* Hidden state handled in JS (conditional render) */
+
+/* Hamburger Icon */
+.hamburger {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 30;
+  cursor: pointer;
+  background: rgb(65, 59, 59);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.hamburger:hover {
+  background: #f0f0f0;
+}
+
+/* ---------------------------------- */
+/* MAIN CONTENT */
+/* ---------------------------------- */
+
+.main-content {
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* When sidebar is OPEN */
+.app-layout.sidebar-open .main-content {
+  margin-left: 360px;
+  width: calc(100% - 360px);
+}
+
+/* FULL WIDTH when sidebar is CLOSED */
+.app-layout.sidebar-closed .main-content {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* ---------------------------------- */
+/* FIX for all children components */
+/* ---------------------------------- */
+
+.card-container,
+.recommended-flex,
+.recommended-title,
+.products,
+.navigation {
+  margin-left: 0 !important;
+}
+
+/* ---------------------------------- */
+/* MOBILE RESPONSIVE */
+/* ---------------------------------- */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 300px;
+  }
+
+  .app-layout.sidebar-open .main-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    width: 260px;
+  }
+
+  .app-layout.sidebar-open .main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+  }
+
+  .hamburger {
+    top: 14px;
+    left: 14px;
+  }
+}
+
+.btns {
+  padding: 10px 20px;
+  margin-right: 6px;
+  background-color: #ffffff;
+  border: 0.6px solid #ccc;
+  border-radius: 5px;
+  color: #323232;
+  cursor: pointer;
+  transition: all 0.2s ease; /* smooth animation */
+}
+
+.btns:hover {
+  transform: scale(1.05); /* slightly larger */
+  border-color: #007bff; /* optional highlight */
+  color: #007bff;
+}
+
+.card {
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: scale(1.05); /* slightly larger */
+  border-color: #007bff; /* optional highlight */
+  color: #007bff;
+}
